@@ -10,9 +10,9 @@ const {adult, backdrop_path, genre_ids, poster_path, id} = movie;
 
     return (
         <div className={css.card}>
-            <PosterPreview key={id} item={poster_path}/>
-            <MovieInfo key={id} item={movie}/>
-            <GenreBadge key={id} genre_ids={genre_ids}/>
+            <PosterPreview item={poster_path}/>
+            <MovieInfo item={movie}/>
+            <GenreBadge genre_ids={genre_ids}/>
             {id}
         </div>
     );
