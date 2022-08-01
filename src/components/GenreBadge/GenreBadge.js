@@ -12,9 +12,12 @@ const GenreBadge = ({genre_ids}) => {
     //     return acc
     // }, [])
 
-  let f =  genres.filter((g, index) => {
-        if (g.id === genre_ids[index]) {
-            return g.name
+    let f = genres.filter(value => {
+
+        for (let id of genre_ids) {
+            if (value.id === id) {
+                return ('asd')
+            }
         }
     })
 
