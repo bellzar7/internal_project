@@ -1,0 +1,9 @@
+.box{
+    position: fixed;
+    background-color: cornflowerblue;
+    width: 100%;
+}
+
+.box1 {
+    height: 50px;
+}

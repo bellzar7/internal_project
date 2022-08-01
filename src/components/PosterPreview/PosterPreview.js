@@ -7,7 +7,7 @@ const PosterPreview = ({item}) => {
     
     return (
         <div>
-            <img src={`${urls.image}${item}`} alt=""/>
+            <img src={`${urls.image}${item}`} alt="" className={css.post}/>
         </div>
     );
 };

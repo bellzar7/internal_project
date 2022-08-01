@@ -15,7 +15,12 @@ const MoviesList = () => {
     useEffect(() => {
         dispatch(movieActions.getAll({page: query.get('page')}))
 
-    }, [dispatch, query])
+    }, [dispatch, query]);
+
+    useEffect(() => {
+        dispatch(movieActions.getAllGenres())
+
+    }, [dispatch]);
 
     const prevPage = () => {
         const page = +query.get('page') - 1;

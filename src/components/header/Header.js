@@ -1,11 +1,16 @@
 import React from 'react';
+
+import css from './header.module.css';
 import {UserInfo} from "../userInfo/UserInfo";
 
 const Header = () => {
     return (
-        <div>
-            headeer
-            <UserInfo/>
+        <div className={css.box1}>
+            <div className={css.box}>
+                headeer
+                <UserInfo/>
+            </div>
+
         </div>
     );
 };
