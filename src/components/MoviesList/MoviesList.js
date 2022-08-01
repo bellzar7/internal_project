@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {useSearchParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+import {Pagination} from "react-bootstrap";
 
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import {movieActions} from "../../redux/slices";
@@ -34,9 +35,26 @@ const MoviesList = () => {
 
     return (
         <div>
+            <div className={css.card}>{movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}</div>
             <button disabled={current_page<=1} onClick={prevPage}>Prev</button>
             <button disabled={current_page>=500} onClick={nextPage}>Next</button> {/*на серваку помилка, пише, що  "total_pages": 34534 , а по факту пейджів не більше 500, тому вручну перевірку поставив*/}
-            <div className={css.card}>{movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}</div>
+            <Pagination>
+                <Pagination.First />
+                <Pagination.Prev />
+                <Pagination.Item>{current_page}</Pagination.Item>
+                <Pagination.Ellipsis />
+
+                <Pagination.Item>{10}</Pagination.Item>
+                <Pagination.Item>{11}</Pagination.Item>
+                <Pagination.Item active>{12}</Pagination.Item>
+                <Pagination.Item>{13}</Pagination.Item>
+                <Pagination.Item disabled>{14}</Pagination.Item>
+
+                <Pagination.Ellipsis />
+                <Pagination.Item>{20}</Pagination.Item>
+                <Pagination.Next />
+                <Pagination.Last />
+            </Pagination>
         </div>
     );
 };
