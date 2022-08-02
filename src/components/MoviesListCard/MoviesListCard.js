@@ -8,7 +8,7 @@ import {urls} from "../../constants";
 import {Button} from "react-bootstrap";
 
 const MoviesListCard = ({movie}) => {
-    const {poster_path, title, vote_average, genre_ids} = movie;
+    const {poster_path, title, vote_average, genre_ids, id} = movie;
 
     return (
         <Card className={css.card}>
@@ -18,7 +18,7 @@ const MoviesListCard = ({movie}) => {
                 <label>Average rating<Badge bg="info">{vote_average}</Badge></label>
                 <GenreBadge genre_ids={genre_ids}/>
                 <hr/>
-                <Button variant="outline-primary">Detail</Button>
+                <Button to={id.toString()} variant="outline-primary">Detail</Button>
             </Card.Body>
         </Card>
     );
