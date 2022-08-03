@@ -6,7 +6,7 @@ import {useSelector} from "react-redux";
 
 const GenreBadge = ({genre_ids}) => {
 
-    const {genres} = useSelector(state => state.movie);
+    const {genres} = useSelector(state => state.genre);
 
     const genresCurrentFilm = genres.reduce((acc, genre) => {
         for (let id of genre_ids) {

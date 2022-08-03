@@ -4,5 +4,18 @@
     flex-wrap: wrap;
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid blue;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.fon{
+    height: 100%;
+    position: absolute;
+    z-index: -1;
 }

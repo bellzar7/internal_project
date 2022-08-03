@@ -1,9 +1,13 @@
-.box{
+.box {
     position: fixed;
-    background-color: cornflowerblue;
+    background-color: #61dafb;
     width: 100%;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    height: 40px;
 }
+
 
 .box1 {
     height: 50px;

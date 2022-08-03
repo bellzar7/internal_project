@@ -6,14 +6,15 @@ import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import {movieActions} from "../../redux/slices";
 import css from './MoviesList.module.css'
 import MyPagination from "../Pagination/MyPagination";
-
+import {genreActions} from "../../redux/slices";
 
 
 const MoviesList = () => {
 
-    const {movies, current_page} = useSelector(state => state.movie);
+    const {movies} = useSelector(state => state.movie);
     const [query, setQuery] = useSearchParams({page: '1'});
     const dispatch = useDispatch();
+
 
     useEffect(() => {
         dispatch(movieActions.getAll({page: query.get('page')}))
@@ -21,7 +22,7 @@ const MoviesList = () => {
     }, [dispatch, query]);
 
     useEffect(() => {
-        dispatch(movieActions.getAllGenres())
+        dispatch(genreActions.getAllGenres())
 
     }, [dispatch]);
 
@@ -42,14 +43,12 @@ const MoviesList = () => {
 
 
     return (
-        <div>
+        <div className={css.box}>
+            {/*<img className={css.fon} src="https://oir.mobi/uploads/posts/2021-03/1616430085_19-p-zadnii-fon-dlya-saita-23.jpg" alt=""/>*/}
+            <MyPagination total={10} current={+query.get('page')} onChangePage={handleChangePage} firstPage={firstPage}
+                          lastPage={lastPage}/>
+
             <div className={css.card}>{movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}</div>
-            {/*на серваку помилка, пише, що  "total_pages": 34534 , а по факту постман дає інфу з пейджів не більше 500-ї, тому вручну перевірку поставив*/}
-
-            <MyPagination total={10} current={+query.get('page')} onChangePage={handleChangePage} firstPage={firstPage} lastPage={lastPage}/>
-
-
-
         </div>
     );
 };

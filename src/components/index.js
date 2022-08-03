@@ -6,4 +6,8 @@ export * from './PosterPreview/PosterPreview';
 export * from './MovieInfo/MovieInfo';
 export * from './GenreBadge/GenreBadge';
 export * from './StarsRating/StarsRating';
-export * from './Pagination/MyPagination'
+export * from './Pagination/MyPagination';
+export * from  './SingleMovieInfo/SingleMovieInfo';
+export * from './Genres/Genres';
+export * from './Genre/Genre';
+export * from './SortByGenre/SortByGenre';
