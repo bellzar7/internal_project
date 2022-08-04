@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card'
 import Badge from "react-bootstrap/Badge";
 import {Button} from "react-bootstrap";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 import css from './MovieListCars.module.css'
 import {GenreBadge} from "../GenreBadge/GenreBadge";
@@ -16,7 +16,7 @@ const MoviesListCard = ({movie}) => {
 
     return (
         <Card className={css.card} onClick={()=> {
-            navigate(`${id}`)
+            navigate(`${id}`, {state:movie})
             movieService.setTokens(id)
         }}>
             <Card.Img variant="top" src={`${urls.image}${poster_path}`}/>
@@ -25,8 +25,7 @@ const MoviesListCard = ({movie}) => {
                 <label>Average rating<Badge bg="info">{vote_average}</Badge></label>
                 <GenreBadge genre_ids={genre_ids}/>
                 <hr/>
-                <Link to={id.toString()} onClick={() => movieService.setTokens(id)}><Button
-                    variant="outline-primary" className={css.btn}>Detail</Button></Link>
+              <Button variant="outline-primary" className={css.btn}>Detail</Button>
             </Card.Body>
         </Card>
     );

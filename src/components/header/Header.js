@@ -13,7 +13,6 @@ const navigate = useNavigate();
         <div className={css.box1}>
             <div className={css.box}>
                 <div >
-                    <Button variant="secondary" onClick={()=> navigate('main')}>Home</Button>
                     <Button variant="secondary" onClick={()=> navigate('movies')}>Movies</Button>
                     <Button variant="secondary" onClick={()=> navigate('genres')}>Genres</Button>
                 </div>

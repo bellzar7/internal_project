@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {Dropdown} from "react-bootstrap";
 
 import {Genre} from "../Genre/Genre";
-import {Dropdown} from "react-bootstrap";
 import {genreActions} from "../../redux/slices";
 
 const Genres = () => {
@@ -19,7 +19,7 @@ const Genres = () => {
     return (
         <div>
             <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                <Dropdown.Toggle variant="outline-primary" id="dropdown-basic">
                     Sort by genre
                 </Dropdown.Toggle>
 

@@ -4,7 +4,7 @@ import {urls} from "../constants";
 const _id = 'id';
 
 const movieService = {
-    getAll: (page = 1) => axiosService.get(urls.discoverMovie, {params: {page}}),
+    getAll: (page) => axiosService.get(urls.discoverMovie, {params: {page}}),
     getCurrentMovie: (movie_id) => axiosService.get(`${urls.currentMovie}/${movie_id}`),
 
     setTokens: (id) => localStorage.setItem(_id, id),
