@@ -1,8 +1,8 @@
 import React from 'react';
 import Badge from "react-bootstrap/Badge";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import {useSelector} from "react-redux";
+
 
 const GenreBadge = ({genre_ids}) => {
 
@@ -20,7 +20,7 @@ const GenreBadge = ({genre_ids}) => {
 
     return (
         <div>
-            {genresCurrentFilm.map(value=> <Badge bg='secondary' key={value.id}>{value.name}</Badge>)}
+            {genresCurrentFilm.map(value => <Badge bg='secondary' key={value.id}>{value.name}</Badge>)}
         </div>
     );
 };

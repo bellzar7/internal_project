@@ -6,7 +6,7 @@
     justify-content: space-evenly;
 }
 
-.box{
+.box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
 }
 
 
-.fon{
+.fon {
     height: 100%;
     position: absolute;
     z-index: -1;

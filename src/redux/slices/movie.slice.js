@@ -6,7 +6,8 @@ const initialState = {
     movies: [],
     current_page: null,
     errors: null,
-    movie: null
+    movie: null,
+    theme: 'light'
 
 };
 
@@ -38,7 +39,11 @@ const getSingleMovie = createAsyncThunk(
 const movieSlice = createSlice({
     name: 'movieSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        changeTheme: (state, action) => {
+            state.theme = action.payload
+        }
+    },
     extraReducers: (builder) =>
         builder
             .addCase(getAll.fulfilled, (state, action) => {
@@ -61,11 +66,12 @@ const movieSlice = createSlice({
             })
 })
 
-const {reducer: movieReducer, actions} = movieSlice;
+const {reducer: movieReducer, actions: {changeTheme}} = movieSlice;
 
 const movieActions = {
     getAll,
-    getSingleMovie
+    getSingleMovie,
+    changeTheme
 }
 
 export {movieReducer, movieActions}

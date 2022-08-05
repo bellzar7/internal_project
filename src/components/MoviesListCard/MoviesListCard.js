@@ -15,8 +15,8 @@ const MoviesListCard = ({movie}) => {
 
 
     return (
-        <Card className={css.card} onClick={()=> {
-            navigate(`${id}`, {state:movie})
+        <Card className={css.card} onClick={() => {
+            navigate(`${id}`, {state: movie})
             movieService.setTokens(id)
         }}>
             <Card.Img variant="top" src={`${urls.image}${poster_path}`}/>
@@ -25,7 +25,7 @@ const MoviesListCard = ({movie}) => {
                 <label>Average rating<Badge bg="info">{vote_average}</Badge></label>
                 <GenreBadge genre_ids={genre_ids}/>
                 <hr/>
-              <Button variant="outline-primary" className={css.btn}>Detail</Button>
+                <Button variant="outline-primary" className={css.btn}>Detail</Button>
             </Card.Body>
         </Card>
     );

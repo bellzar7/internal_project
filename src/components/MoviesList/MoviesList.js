@@ -44,7 +44,6 @@ const MoviesList = () => {
 
     return (
         <div className={css.box}>
-            {/*<img className={css.fon} src="https://oir.mobi/uploads/posts/2021-03/1616430085_19-p-zadnii-fon-dlya-saita-23.jpg" alt=""/>*/}
             <MyPagination total={10} current={+query.get('page')} onChangePage={handleChangePage} firstPage={firstPage}
                           lastPage={lastPage}/>
 

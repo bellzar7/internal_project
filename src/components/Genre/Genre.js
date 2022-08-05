@@ -1,7 +1,6 @@
 import React from 'react';
 import {Dropdown} from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
-import {genreService} from "../../services";
 
 const Genre = ({item}) => {
 

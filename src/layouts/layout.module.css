@@ -1,0 +1,12 @@
+:root{
+    --main-bg-color: #ad485a;
+    --dark-bg-color: #004225
+}
+
+.light{
+    background: url("https://i.pinimg.com/originals/8b/55/5c/8b555c6eea523cb46770aa00631c317f.png");
+}
+
+.dark{
+    background: url('https://oir.mobi/uploads/posts/2021-03/thumbs/1616430090_9-p-zadnii-fon-dlya-saita-13.png');
+}

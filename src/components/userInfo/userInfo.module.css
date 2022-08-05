@@ -1,0 +1,14 @@
+.ow {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: snow;
+    margin-left: 10px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    color: snow;
+    justify-content: center;
+}

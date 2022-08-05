@@ -1,8 +1,7 @@
-import {Route, Routes, Navigate} from "react-router-dom"
+import {Navigate, Route, Routes} from "react-router-dom"
 
 import {GenresPage, MoviesPage, NotFoundPages, SingleMoviePage, SortsByGenrePage,} from "./pages";
 import {MainLayout} from "./layouts";
-import css from './App.css'
 
 function App() {
     return (

@@ -10,7 +10,7 @@ import {GenreBadge} from "../GenreBadge/GenreBadge";
 const MovieInfo = ({index}) => {
 
 
-    const {title, release_date, vote_average, genres, backdrop_path, overview,genre_ids} = index;
+    const {title, release_date, vote_average, genres, backdrop_path, overview, genre_ids} = index;
 
 
     return (
@@ -21,8 +21,8 @@ const MovieInfo = ({index}) => {
             <div className={css.inf}>
                 <h4>{title}</h4>
                 <label>Average rating<Badge bg="info">{vote_average}</Badge></label>
-                {genre_ids&&<GenreBadge genre_ids={genre_ids}/>}
-                {genres&&<GenreBadge genre_ids={genres}/>}
+                {genre_ids && <GenreBadge genre_ids={genre_ids}/>}
+                {genres && <GenreBadge genre_ids={genres}/>}
 
                 <p>Release date: {release_date}</p>
                 <p>{overview}</p>

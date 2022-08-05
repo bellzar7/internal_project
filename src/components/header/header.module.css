@@ -1,14 +1,27 @@
-.box {
+.light {
     position: fixed;
-    background-color: #61dafb;
+    background-color: #513a70;
     width: 100%;
     z-index: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.dark {
+    position: fixed;
+    background-color: #013f56;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
     height: 40px;
 }
 
 
 .box1 {
-    height: 50px;
+    height: 40px;
+    width: 30%;
+    position: center;
+    text-align: center;
 }
